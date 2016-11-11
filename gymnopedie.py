@@ -50,6 +50,15 @@ def after_melody():
         sleep(3)
 
 
+# def ambient_dark():
+#     for i in range(20):
+#         sample(AMBI_DARK_WOOSH)
+#         sleep(1)
+#
+#
+# t_ambient_dark = Thread(target=ambient_dark)
+# t_ambient_dark.start()
+
 # get threads
 t_accompaniment_1 = Thread(target=accompaniment_1)
 t_accompaniment_1.start()
@@ -68,3 +77,4 @@ t_after_melody.start()
 sleep(15 + 1)
 t_melody = Thread(target=melody)
 t_melody.start()
+
