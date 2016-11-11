@@ -14,7 +14,7 @@ play(Ds4)   # plays Re sharp
 sleep(1)    # sleep for one beat
 ```
 
-## Defaults play
+## Play defaults
 
 * __amp__ for amplification
 * __pan__ for stereo left (-1) or right (1)
@@ -26,12 +26,13 @@ sleep(1)    # sleep for one beat
 play(C4, amp=1, pan=0, release=1, attack=0, sustain=0)
 ```
 
-## More defaults
+## More play defaults
 
 * __decay__ is the time to go from attack level to sustain level
 * __attack_level__ default 1 (to implement)
 * __decay_level__ default is sustain_level (to implement)
 * __sustain_level__ is the level of the sustain
+
 
 1. attack - time from 0 amplitude to the attack_level,
 2. decay - time to move amplitude from attack_level to decay_level,
@@ -42,7 +43,7 @@ play(C4, amp=1, pan=0, release=1, attack=0, sustain=0)
 play(C4, decay=0, sustain_level=1)
 ```
 
-## defaults sample
+## Sample defaults
 
 __rate__ the more the fastest, minus for backwards
 
@@ -51,7 +52,7 @@ sample(LOOP_AMEN_FULL, rate=1)
 sample('/home/pere/my-sound.wav')  # wav, aiff or flac
 ```
 
-## discovering samples
+## Discovering new samples
 
 * ambi
 * bass
