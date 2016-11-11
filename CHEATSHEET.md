@@ -45,7 +45,7 @@ play(C4, decay=0, sustain_level=1)
 
 ## Sample defaults
 
-__rate__ the more the fastest, minus for backwards
+* __rate__ the more the fastest, minus for backwards
 
 ```python
 sample(LOOP_AMEN_FULL, rate=1)
