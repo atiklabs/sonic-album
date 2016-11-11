@@ -16,11 +16,11 @@ sleep(1)    # sleep for one beat
 
 ## Defaults play
 
-__amp__ for amplification
-__pan__ for stereo left (-1) or right (1)
-__release__ is the time for the note to fade out
-__attack__ is the time for the note to fade in
-__sustain__ is the time for the note to maintain in full amplitude
+* __amp__ for amplification
+* __pan__ for stereo left (-1) or right (1)
+* __release__ is the time for the note to fade out
+* __attack__ is the time for the note to fade in
+* __sustain__ is the time for the note to maintain in full amplitude
 
 ```python
 play(C4, amp=1, pan=0, release=1, attack=0, sustain=0)
@@ -28,10 +28,10 @@ play(C4, amp=1, pan=0, release=1, attack=0, sustain=0)
 
 ## More defaults
 
-__decay__ is the time to go from attack level to sustain level
-__attack_level__ default 1 (to implement)
-__decay_level__ default is sustain_level (to implement)
-__sustain_level__ is the level of the sustain
+* __decay__ is the time to go from attack level to sustain level
+* __attack_level__ default 1 (to implement)
+* __decay_level__ default is sustain_level (to implement)
+* __sustain_level__ is the level of the sustain
 
 1. attack - time from 0 amplitude to the attack_level,
 2. decay - time to move amplitude from attack_level to decay_level,
@@ -52,6 +52,7 @@ sample('/home/pere/my-sound.wav')  # wav, aiff or flac
 ```
 
 ## discovering samples
+
 * ambi
 * bass
 * elec
