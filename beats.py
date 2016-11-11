@@ -48,7 +48,7 @@ def industrial():
 
 
 # Main thread
-
+time.sleep(1 - time.time() % 1)
 Thread(target=base).start()
 Thread(target=synthesis).start()
 Thread(target=clapping_hands).start()
