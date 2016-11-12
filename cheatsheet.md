@@ -1,6 +1,13 @@
 # Sonic Pi instructions cheat sheet
 
-## C (do) D (re) E (mi) F (fa) G (sol) A (la) B (si)
+* __Sonic Pi tutorial__ https://gist.github.com/jwinder/e59be201082cca694df9
+* __Python tutorial__ https://docs.python.org/3/tutorial/
+
+
+```
+## ###
+CDEFGAB
+```
 
 ```python
 use_synth(SAW)  # instruments
@@ -63,6 +70,14 @@ sample('/home/pere/my-sound.wav')  # wav, aiff or flac
 * drum
 * misc
 * bd
+
+## Discovering FX
+
+* wobble
+* reverb
+* echo
+* distortion
+* slicer
 
 # a simple approach to communicate with Sonic Pi
 
