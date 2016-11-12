@@ -1,4 +1,5 @@
-# Coded by Pere Garcia
+# Experiment 2: Electronics
+# Coded by Atik
 
 from psonic import *
 from threading import Thread

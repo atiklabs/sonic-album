@@ -1,4 +1,5 @@
-# Coded by Pere Garcia
+# Experiment 1: Gymnopedie
+# Coded by Atik
 
 from psonic import *
 from threading import Thread
