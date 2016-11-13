@@ -53,7 +53,15 @@ play(C4, decay=0, sustain_level=1)
 
 ## Sample defaults
 
+* __amp__
+* __pan__
 * __rate__ the more the fastest, minus for backwards
+* __attack__ fade in at the beginning in seconds
+* __release__ fade out in the end in seconds
+* __sustain__ default is magically except explicitly asked in seconds
+* __start__ in percentage
+* __finish__ in percentage
+
 
 ```python
 sample(LOOP_AMEN_FULL, rate=1)
@@ -73,11 +81,40 @@ sample('/home/pere/my-sound.wav')  # wav, aiff or flac
 
 ## Discovering FX
 
-* wobble
-* reverb
-* echo
+* band_eq
+* bitcrusher
+* bpf
+* compressor
 * distortion
+* echo
+* flanger
+* gverb
+* hpf
+* ixi_techno
+* krush
+* level
+* lpf
+* mono
+* nhpf
+* nlpf
+* normaliser
+* nrbpf
+* 0nrhpf
+* nrlpf
+* octaver
+* pan
+* panslicer
+* pitch_shift
+* rbpf
+* reverb
+* rhpf
+* ring_mod
+* rlpf
 * slicer
+* tanh
+* vowel
+* whammy
+* wobble
 
 # a simple approach to communicate with Sonic Pi
 
