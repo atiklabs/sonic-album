@@ -74,20 +74,20 @@ def house_external_wind_chime(bit_crusher):
 
 def director():
     global BEAT
-    while BEAT < 12*16:
-        if BEAT < 1*16:
+    while BEAT < 14*16:
+        if BEAT < 1*16:     # 0
             start_thread(rhythmic_foundation, 0, [False, True])
-        elif BEAT < 2*16:
+        elif BEAT < 2*16:   # 1-7
             start_thread(rhythmic_foundation, 0, [True, True])
-        elif BEAT < 8*16:
-            start_thread(rhythmic_foundation, 0, [True, True])
-            start_thread(rhythmic_support, 0, [0])
-        elif BEAT < 10*16:
+        elif BEAT < 8*16:   # 8-9
             start_thread(rhythmic_foundation, 0, [True, True])
             start_thread(rhythmic_support, 0, [1])
-        elif BEAT < 12*16:
+        elif BEAT < 10*16:  # 10-11
+            start_thread(rhythmic_foundation, 0, [True, True])
+            start_thread(rhythmic_support, 0, [2])
+        elif BEAT < 12*16:  # 12-14
             start_thread(rhythmic_foundation, 0, [True, True, True])
-            start_thread(rhythmic_support, 0, [1])
+            start_thread(rhythmic_support, 0, [3])
         # prepare next beat and sleep until then
         sleep(BEAT_TIME)
         BEAT += 1
@@ -123,11 +123,21 @@ def rhythmic_foundation(telephone=False, echo=False, happy=False):
 
 
 def rhythmic_support_15():
-    sample(S_BUTTON_15, amp=0.8)
+    use_fx(['reverb'])
+    sample(S_BUTTON_15, amp=0.25, rate=0.8755)
+    use_fx([])
 
 
 def rhythmic_support_17():
-    sample(S_BUTTON_17, amp=0.8)
+    use_fx(['krush'])
+    sample(S_BUTTON_17, amp=0.8, start=0.15, finish=0.5)
+    use_fx([])
+
+
+def rhythmic_support_17_grave():
+    use_fx(['krush'])
+    sample(S_BUTTON_17, amp=0.8, rate=0.75, start=0.15, finish=0.4)
+    use_fx([])
 
 
 def rhythmic_support_47():
@@ -136,16 +146,31 @@ def rhythmic_support_47():
 
 def rhythmic_support(p_type=0):
     if BEAT % 8 == 0:
-        if p_type == 0:
-            start_thread(rhythmic_support_15, BEAT_TIME*4)
-            start_thread(rhythmic_support_47, BEAT_TIME*6)
         if p_type == 1:
-            start_thread(rhythmic_support_15, BEAT_TIME*0)
-            start_thread(rhythmic_support_17, BEAT_TIME*2)
-            start_thread(rhythmic_support_15, BEAT_TIME*4)
+            start_thread(rhythmic_support_17, BEAT_TIME*4)
             start_thread(rhythmic_support_47, BEAT_TIME*6)
+        if p_type == 2:
+            start_thread(rhythmic_support_17, BEAT_TIME*0)
+            start_thread(rhythmic_support_17_grave, BEAT_TIME*2)
+            start_thread(rhythmic_support_17, BEAT_TIME*4)
+            start_thread(rhythmic_support_47, BEAT_TIME*6)
+        if p_type == 3:
+            start_thread(rhythmic_support_17, BEAT_TIME*0)
+            start_thread(rhythmic_support_17_grave, BEAT_TIME*2)
+            start_thread(rhythmic_support_17, BEAT_TIME*4)
+            start_thread(rhythmic_support_47, BEAT_TIME*6)
+            start_thread(rhythmic_support_15, BEAT_TIME*0)
+            start_thread(rhythmic_support_15, BEAT_TIME*1)
+            start_thread(rhythmic_support_15, BEAT_TIME*2)
+            start_thread(rhythmic_support_15, BEAT_TIME*3)
+            start_thread(rhythmic_support_15, BEAT_TIME*4)
+            start_thread(rhythmic_support_15, BEAT_TIME*5)
+            start_thread(rhythmic_support_15, BEAT_TIME*6)
+            start_thread(rhythmic_support_15, BEAT_TIME*7)
+
 
 
 # Main
+#BEAT = 8*16
 start_thread(nature_rain_beginning)
 #start_thread(director)
